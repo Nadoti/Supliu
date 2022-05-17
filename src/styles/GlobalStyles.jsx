@@ -10,12 +10,20 @@ export const GlobalStyles = createGlobalStyle`
   body {
     background: url(${background}) no-repeat center;
     height: 750px;
+    font-family: Arial;
   }
 
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial;
+  }
+
+  .erro_naoEncontrado {
+    margin-left: 1rem;
+    margin-top: 2rem;
+    font-size: 2rem;
   }
 
   li {

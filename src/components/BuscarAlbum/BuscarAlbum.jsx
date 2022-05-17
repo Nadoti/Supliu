@@ -11,20 +11,20 @@ const BuscarAlbum = () => {
   const album = useForm()
   const { buscarAlbum, loading } = React.useContext(UserContext)
 
-  function teste(event) {
-    event.preventDefault()
+  function procurarAlbum() {
     buscarAlbum(album.value)
   }
 
   return (
     <Container>
       <Label>Digite uma palavra chave</Label>
-      <Content onSubmit={teste}>
+      <Content>
         <Input 
           type="text"
           name="buscar"
           placeholder="Buscar"
-          {...album}
+          value={album.value}
+          onChange={album.onChange}
         />
         {loading 
           ? (<Button 
@@ -40,6 +40,7 @@ const BuscarAlbum = () => {
             color="white"
             padding="1rem 4rem"
             fontSize="1rem"
+            onClick={procurarAlbum}
           >
             Procurar
           </Button>)

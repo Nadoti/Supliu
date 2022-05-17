@@ -39,7 +39,7 @@ const MostrarAlbum = ({ abrirNovaModalFaixa, abrirExcluirModalFaixa, abrirExclui
         size={50}
       />)
     : (error 
-      ? (<p>{error}</p>) 
+      ? (<p className='erro_naoEncontrado'>{error}</p>) 
       : (<section>
         {albuns.map(album => (
           <Container key={album.id}>
